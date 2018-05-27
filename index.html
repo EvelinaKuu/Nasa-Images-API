@@ -2,20 +2,32 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Test Solutions</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Nasa Images API</title>
 </head>
 <body>
   <main>
     <div class="hero">
         <h1>Nasa Images API</h1>
+        <h4>Search</h4>
+        <form id="searchForm">
+          <input type="text" class="form-control" id="searchText" placeholder="Search Nasa images">
+        </form>
     </div>
-    <div class="images">
-      <div class="row">
-      </div>
+    <h2>images</h2>
+    <div id="nasa-images" class="row">
+
     </div>
   </main>
   <footer>
   </footer>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script language="JavaScript" type="text/javascript" src="js/app.js"  charset="utf-8"></script>
+  <link rel="stylesheet" href="style.css">
+
 </body>
+
 </html>
