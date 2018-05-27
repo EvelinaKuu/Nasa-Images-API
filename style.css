@@ -1,0 +1,17 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 0;
+  background-color: #10408F;
+  color: #F93F2E;
+}
