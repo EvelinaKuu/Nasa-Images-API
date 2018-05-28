@@ -1,29 +1,26 @@
 $(document).ready(() => {
   $('#searchForm').on('submit', (e) => {
-    let searchText = ($('#searchText').val());
+    const searchText = ($('#searchText').val());
     getImages(searchText);
     e.preventDefault();
   });
 });
 
-
 function getImages(searchText){
   axios.get('https://images-api.nasa.gov/search?q='+searchText)
     .then((response) => {
-      console.log(response.data.collection);
-      let images = response.data.collection;
+      const images = response.data.collection.items;
       let output = '';
       $.each(images, (index, image) => {
         output += `
           <div class="">
             <div class="">
-            <p>${image.items}</p>
+            <img src=${image.links[0].href}></img>
             </div>
           </div>
          `;
       });
-      $('#images').html(output);
-      console.log(output);
+      $('#nasa-images').html(output);
     })
     .catch((err) => {
       console.log(err);
