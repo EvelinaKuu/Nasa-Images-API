@@ -7,16 +7,14 @@ $(document).ready(() => {
 });
 
 function getImages(searchText){
-  axios.get('https://images-api.nasa.gov/search?q='+searchText)
+  axios.get('https://images-api.nasa.gov/search?q='+searchText+'&media_type=image')
     .then((response) => {
       const images = response.data.collection.items;
       let output = '';
       $.each(images, (index, image) => {
         output += `
-          <div class="">
-            <div class="">
-            <img src=${image.links[0].href}></img>
-            </div>
+          <div class="image-box">
+            <img src=${image.links[0].href} class="img"></img>
           </div>
          `;
       });

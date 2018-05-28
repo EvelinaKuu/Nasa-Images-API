@@ -8,10 +8,17 @@ body, html {
 .hero {
   display: flex;
   flex-direction: column;
-  height: 100px;
+  height: 170px;
   align-items: center;
   justify-content: center;
+  margin-top: 70px;
   padding: 70px 0;
-  background-color: #10408F;
-  color: #F93F2E;
+  color: #10408F;
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  padding-top: 10px;
 }
